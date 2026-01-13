@@ -7,12 +7,31 @@ This project is my first internship data analytics project, where I analyzed fak
 The complete workflow covers data cleaning in Excel and data visualization in Power BI, resulting in an interactive dashboard that highlights key fraud indicators.
 
 
+**1️⃣ Project Background**
 
-**🎯 Objective**
+Online job portals are growing rapidly, but at the same time fake job postings are also increasing. These fake jobs can lead to financial loss, data theft, and exploitation of job seekers.
 
-Identify the percentage of fake job postings
+This project focuses on analyzing job posting data to:
 
-Analyze how fake jobs vary by:
+Identify fake job postings
+
+Understand patterns behind job fraud
+
+Create a data-driven dashboard that helps detect fraud risk
+
+This was my first internship project, where I applied Excel data cleaning and Power BI visualization skills on a real-world dataset.
+
+
+
+**2️⃣ Objective of the Project**
+
+The main goals of this project were:
+
+Calculate the percentage of fake job postings
+
+Compare fake vs real jobs
+
+Analyze fraud patterns based on:
 
 Employment type
 
@@ -22,52 +41,55 @@ Location (On-site / Remote)
 
 Company logo availability
 
-Calculate an overall Fraud Risk Score
+Create a Fraud Risk Score
 
-Present insights through a clean, interactive Power BI dashboard
-
-
-
-**🛠 Tools & Technologies Used**
-
-Microsoft Excel
-
-Data cleaning
-
-Data validation
-
-Pivot tables & pivot charts
-
-Power BI
-
-Data modeling
-
-DAX measures
-
-Interactive dashboard & slicers
-
-DAX
-
-Fake Job Percentage
-
-Fraud Risk Score
-
-KPI calculations
+Present insights in an interactive Power BI dashboard
 
 
 
-**🧹 Data Cleaning (Excel)**
+**3️⃣ Dataset Understanding**
 
-The raw dataset was cleaned in Excel before importing into Power BI:
+The dataset contains information related to job postings, such as:
 
-Removed duplicate records
+Job title
 
-Standardized employment type values
+Company name
 
-Cleaned industry and location fields
+Industry
 
-Converted binary fields (fake / real)
+Employment type
 
+Location
+
+Company logo availability
+
+Whether the job is fake or real
+
+The data was raw and unstructured, so cleaning was required before analysis.
+
+
+
+**4️⃣ Data Cleaning Process (Excel)**
+
+Data cleaning was performed entirely in Microsoft Excel before importing into Power BI.
+
+**🔹 Step-by-Step Cleaning**
+
+Removed duplicate rows to avoid double counting
+
+Standardized text values
+
+Employment types (Full-time, Part-time, Internship, Contract, Temporary)
+
+Location names (On-site, Remote)
+
+Handled missing values
+
+Cleaned blank industry and company logo fields
+
+Converted categorical values
+
+Fake jobs converted to binary format (0 = Real, 1 = Fake)
 
 **Created clean columns:**
 
@@ -77,15 +99,31 @@ clean_location
 
 clean_has_logo
 
-Verified data using Pivot Tables
+Used Pivot Tables to:
+
+Validate totals
+
+Cross-check fake vs real counts
+
+This step ensured accurate and reliable data for visualization.
 
 
 
-**📈 Dashboard Features**
+**5️⃣ Data Modeling in Power BI**
 
-The Power BI dashboard includes:
+After cleaning, the Excel file was imported into Power BI.
 
-KPI Cards
+🔹 Data Model
+
+Single fact table with cleaned columns
+
+No redundancy
+
+Optimized for performance
+
+🔹 DAX Measures Created
+
+Some important measures include:
 
 Total Jobs
 
@@ -95,67 +133,149 @@ Real Jobs
 
 Fake Job Percentage
 
-Remote Jobs
-
 Industry Fraud Rate
 
-Visual Analysis
+Fraud Risk Score
 
-Donut chart: Fake vs Real Jobs
-
-Bar chart: Employment Type vs Fake Jobs
-
-Location-based fraud analysis
-
-Logo availability vs job authenticity
-
-Fraud Risk Score gauge
-
-Filters & Slicers
-
-Industry
-
-Location (On-site / Remote)
+These measures helped convert raw data into meaningful KPIs.
 
 
 
-**🔍 Key Insights**
+**6️⃣ Dashboard Explanation (Visual-Wise)**
+🟣 KPI Cards (Top Section)
 
-Around 51% of job postings are fake, indicating high fraud risk
+Total Jobs (3000)
+Total number of job postings analyzed.
 
-Remote jobs show a higher fake job ratio
+Fake Jobs (1528)
+Number of identified fake job postings.
 
-Job postings without company logos are more likely to be fake
+Real Jobs (1472)
+Number of legitimate job postings.
 
-Certain industries and employment types show higher fraud concentration
+Fake Job Percentage (51%)
+Shows that more than half of the jobs are fake.
 
-Overall Fraud Risk Score = 0.58, indicating moderate-to-high risk
+Remote Jobs (1523)
+Total remote job postings.
+
+Industry Fraud Rate (0.51)
+Average fraud rate across industries.
+
+🟣 Donut Chart – Fake vs Real Jobs
+
+Visual comparison of fake and real job postings
+
+Clearly highlights the high proportion of fake jobs
+
+🟣 Employment Type vs Fake Jobs
+
+This bar chart shows:
+
+Full-time jobs have a significant number of fake postings
+
+Internships and temporary roles also show fraud risk
+
+Helps job seekers identify high-risk employment types
+
+🟣 Logo Availability vs Fake Jobs
+
+This visual shows:
+
+Jobs without company logos are more likely to be fake
+
+Logo presence acts as a trust indicator
+
+🟣 Location Analysis (On-site vs Remote)
+
+Remote jobs have higher fraud concentration
+
+On-site jobs are comparatively safer
+
+This insight is important in today’s remote-first job market
+
+🟣 Fraud Risk Score Gauge
+
+Calculated using fake job percentage
+
+Score displayed: 0.58
+
+Indicates moderate to high fraud risk
+
+This gives a quick summary metric for decision-makers.
+
+🟣 Detailed Job Table
+
+Displays job title, company, industry, and employment type
+
+Allows users to inspect individual job postings
+
+Useful for auditing and verification
 
 
 
-**📌 Key Learnings**
+**7️⃣ Filters & Interactivity**
 
-Practical experience in real-world data cleaning
+Industry slicer: Analyze fraud in specific industries
 
-Understanding fraud detection indicators
+Location slicer: Compare on-site vs remote fraud
 
-Hands-on experience with Excel → Power BI workflow
-
-Writing meaningful DAX measures
-
-Building professional dashboards for decision-making
+All visuals update dynamically based on selection
 
 
 
-**🚀 Future Improvements**
+**8️⃣ Key Insights & Findings**
 
-Add time-based analysis
+51% of jobs are fake, indicating serious fraud risk
 
-Apply machine learning for fraud prediction
+Remote jobs are more vulnerable to scams
 
-Improve dashboard UI with advanced tooltips
+Jobs without logos have higher fraud probability
 
-Automate data refresh
+Some industries show consistently higher fake job ratios
+
+Fraud Risk Score confirms urgent need for verification
+
+
+
+**9️⃣ Business Impact**
+
+Helps job portals improve fraud detection
+
+Assists job seekers in making safer decisions
+
+Enables recruiters to improve trust & transparency
+
+Supports data-driven decision-making
+
+
+
+**🔟 Learning Outcomes**
+
+Real-world Excel data cleaning experience
+
+Creating meaningful pivot tables
+
+Writing DAX measures
+
+Designing professional Power BI dashboards
+
+Understanding fraud analytics
+
+
+
+
+**🔮 Future Enhancements**
+
+Add time-based trends
+
+Use ML models for fraud prediction
+
+Automate data pipeline
+
+Enhance UI with tooltips & drill-through
+
+
 
 
 
