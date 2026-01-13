@@ -278,4 +278,6 @@ Enhance UI with tooltips & drill-through
 
 
 
+![Dashboard Preview](https://github.com/Prerna-Pohakar/Fake-vs-Real-Job-Analysis-/blob/main/Fake%20vs%20Real%20job%20dashboard.png)
+
 
